@@ -19,7 +19,6 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && (CONFIG.GITHUB_EDIT_URL + curren
     <HeadCommon />
     <HeadSEO {content} canonicalURL={Astro.request.canonicalURL} />
     <title>{content.title ? `${content.title} 🚀 ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
     <style>
       body {
         width: 100%;
@@ -27,6 +26,7 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && (CONFIG.GITHUB_EDIT_URL + curren
         grid-template-rows: var(--theme-navbar-height) 1fr;
         --gutter: 0.5rem;
         --doc-padding: 2rem;
+        @apply bg-base-100
       }
       .layout {
         display: grid;
@@ -49,7 +49,7 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && (CONFIG.GITHUB_EDIT_URL + curren
       }
       #grid-left {
         position: fixed;
-        @apply bg-base-100;
+        @apply bg-base-100 text-base-content;
         z-index: 10;
         display: none;
       }
@@ -62,6 +62,7 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && (CONFIG.GITHUB_EDIT_URL + curren
       }
       #grid-right {
         display: none;
+        @apply text-base-content
       }   
       :global(.mobile-sidebar-toggle) {
         overflow: hidden;
@@ -104,9 +105,9 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && (CONFIG.GITHUB_EDIT_URL + curren
     </style>
   </head>
 
-  <body class="bg-base-100">
+  <body>
     <Header currentPage={currentPage} />
-    <main class="layout bg-base-100">
+    <main class="layout bg-base-100 text-base-content">
       <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
         <LeftSidebar currentPage={currentPage} />
       </aside>
