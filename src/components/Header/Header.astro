@@ -15,7 +15,7 @@ const lang = currentPage && getLanguageFromURL(currentPage);
       z-index: 11;
       height: var(--theme-navbar-height);
       width: 100%;
-      background-color: var(--theme-navbar-bg);
+      @apply bg-base-100;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -113,7 +113,7 @@ const lang = currentPage && getLanguageFromURL(currentPage);
       }
     }
 </style>
-<header>
+<header class="">
     <SkipToContent />
     <nav class="nav-wrapper" title="Top Navigation">
     <div class="menu-toggle">
