@@ -1,6 +1,6 @@
 export const SITE = {
-  title: 'Your Documentation Website',
-  description: 'Your website description.',
+  title: 'Blossom+',
+  description: 'Your daisyUI Theme manager',
   defaultLanguage: 'en_US',
 };
 
