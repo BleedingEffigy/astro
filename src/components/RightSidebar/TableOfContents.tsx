@@ -27,13 +27,13 @@ const TableOfContents: FunctionalComponent<{ headers: any[] }> = ({ headers = []
     <>
       <h2 class="heading">On this page</h2>
       <ul>
-        <li class={`header-link depth-2 ${activeId === 'overview' ? 'active' : ''}`.trim()}>
+        <li class={`header-link hover:bg-base-200 depth-2 ${activeId === 'overview' ? 'active' : ''}`.trim()}>
           <a href="#overview">Overview</a>
         </li>
         {headers
           .filter(({ depth }) => depth > 1 && depth < 4)
           .map((header) => (
-            <li class={`header-link depth-${header.depth} ${activeId === header.slug ? 'active' : ''}`.trim()}>
+            <li class={`header-link hover:bg-base-200 depth-${header.depth} ${activeId === header.slug ? 'active' : ''}`.trim()}>
               <a href={`#${header.slug}`}>{header.text}</a>
             </li>
           ))}
