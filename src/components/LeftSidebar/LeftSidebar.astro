@@ -16,6 +16,12 @@ const sidebarSections = SIDEBAR[langCode].reduce((col, item) => {
 
 ---
 
+<style>
+  .nav-link {
+    @apply hover:bg-base-200
+  }
+</style>
+
 <nav aria-labelledby="grid-left">
   <ul class="nav-groups">  
     {sidebarSections.map(section => (
