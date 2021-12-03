@@ -6,6 +6,7 @@ import SkipToContent from './SkipToContent.astro';
 import SidebarToggle from './SidebarToggle.tsx';
 import LanguageSelect from './LanguageSelect.tsx';
 import Search from "./Search.tsx";
+import ThemeSelect from '../RightSidebar/ThemeSelect.astro';
 
 const {currentPage} = Astro.props;
 const lang = currentPage && getLanguageFromURL(currentPage);
@@ -125,7 +126,11 @@ const lang = currentPage && getLanguageFromURL(currentPage);
           <h1>Blossom+</h1>
         </a>
     </div>
-    <div style="flex-grow: 1;"></div>
+    <div class="flex-grow justify-self-end">
+    <div style="">
+      <ThemeSelect client:visible />
+    </div>
+    </div>
     {KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
     {CONFIG.ALGOLIA && <div class="search-item"><Search client:idle /></div>}
     </nav>
