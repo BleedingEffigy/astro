@@ -1,5 +1,40 @@
-<script>
-  // Redirect your homepage to the first page of documentation.
-  // If you have a landing page, remove this script and add it here!
-  window.location.pathname = `/en/introduction`;
-</script>
+---
+import HeadCommon from "../components/HeadCommon.astro";
+import HeadSEO from "../components/HeadSEO.astro";
+import Header from '../components/Header/Header.astro';
+import Footer from '../components/Footer/Footer.astro';
+import * as CONFIG from "../config";
+
+const { content = {} } = Astro.props;
+const currentPage = Astro.request.url.pathname;
+---
+
+<!--  when content is blank (such as in this case) content details thankfully default to site details -->
+<html dir={content.dir ?? 'ltr'} lang={content.lang ?? 'en-us'} class="initial" data-theme>
+  <head>
+    <HeadCommon />
+    <HeadSEO {content} canonicalURL={Astro.request.canonicalURL} />
+    <title>{content.title ? `${content.title} 🚀 ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>
+  </head>
+
+  <body>
+    <Header currentPage={currentPage} />
+    <main class="bg-base-300 text-base-content">
+      <div class="hero min-h-screen bg-base-200">
+        <div class="flex-col hero-content lg:flex-row-reverse">
+          <img src="https://picsum.photos/id/1005/600/600" class="max-w-sm rounded-lg shadow-2xl"> 
+          <div>
+            <h1 class="mb-5 text-5xl font-bold">
+                  Hello there
+                </h1> 
+            <p class="mb-5">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+                </p> 
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer/>
+  </body>
+</html>
