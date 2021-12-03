@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@docsearch/react": "^1.0.0-alpha.27",
+    "blossomplus": "^0.0.1",
     "daisyui": "^1.16.2",
     "tailwindcss": "^2.2.19"
   },
