@@ -48,7 +48,7 @@ const currentPage = Astro.request.url.pathname;
               </svg>
             </span>
 
-            <h2 class="mt-3 text-2xl font-bold">Easily Setup DaisyUI</h2>
+            <h2 class="mt-3 text-2xl text-primary font-bold">Easily Setup DaisyUI</h2>
 
             <p class="mt-3 text-sm text-base-content">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facere fuga illum, totam dolor odio ad sunt quidem
@@ -63,7 +63,7 @@ const currentPage = Astro.request.url.pathname;
               </svg>
             </span>
 
-            <h2 class="mt-3 text-2xl font-bold">Access a repo of themes</h2>
+            <h2 class="mt-3 text-2xl text-primary font-bold">Access a repo of themes</h2>
 
             <p class="mt-3 text-sm text-base-content">
               Easily manage and add new themes to your project with simple commands
@@ -77,7 +77,7 @@ const currentPage = Astro.request.url.pathname;
               </svg>
             </span>
 
-            <h2 class="mt-3 text-2xl font-bold">Add a custom theme</h2>
+            <h2 class="mt-3 text-2xl text-primary font-bold">Add a custom theme</h2>
 
             <p class="mt-3 text-sm text-base-content">
               Already have a working theme? Make a pull request and soon enough your theme will be available for you to install in new projects!
@@ -88,26 +88,25 @@ const currentPage = Astro.request.url.pathname;
 
       <section class="container p-10">
         <Markdown>
-        ## Getting Started
+          ## Getting Started
 
-        The easiest way to start a new project is to use the Gatsby starter. It generates a ready-to-use project with all needed dependencies.
-        
-        ### Create your website:
+            Blossom+ works by adding the daisyui plugin into an existing tailwind configuration file. Then after its easy to add and list installed themes. 
 
-        <Code code={`npx gatsby-cli new website https://github.com/gregberge/smooth-doc-starter`} lang="shellscript" theme="dracula-soft" />
+            ### Add daisyUI plugin to tailwinds config file
 
-        ### Change directories into site folder
+            <Code code={`npx blossomplus init`} lang="shellscript" theme="dracula-soft" />
 
-        <Code code={`cd website`} lang="shellscript" theme="dracula-soft"/>
+            This also installs all the default themes provided by daisyUI
 
-        ### Start development server
+            ### Add a custom theme
 
-        <Code code={`npm run develop`} lang="shellscript" theme="dracula-soft"/>
+            <Code code={`npx blossomplus add xmas`} lang="shellscript" theme="dracula-soft" />
 
-        Gatsby will start a hot-reloading development environment accessible by default at http://localhost:8000.
+            All custom themes live in the repo and can be found here.
 
-        Try editing the home page in pages/index.mdx. Saved changes will live reload in the browser.
+            ### List all custom themes
 
+            <Code code={`npx blossomplus list`} lang="shellscript" theme="dracula-soft" />
         </Markdown>
       </section>
     </main>
