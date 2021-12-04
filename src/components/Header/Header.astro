@@ -14,7 +14,6 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 <style>
     header {
       z-index: 11;
-      height: var(--theme-navbar-height);
       width: 100%;
       @apply bg-base-200 hover:bg-base-200 text-primary hover:text-primary-focus;
       display: flex;
@@ -75,7 +74,7 @@ const lang = currentPage && getLanguageFromURL(currentPage);
     @media (min-width: 50em) {
         header {
             position: static;
-            padding: 2rem 0rem;
+            padding: 1rem 0rem;
         }
         .logo {
             width: auto;
@@ -114,7 +113,7 @@ const lang = currentPage && getLanguageFromURL(currentPage);
       }
     }
 </style>
-<header class="">
+<header>
     <SkipToContent />
     <nav class="nav-wrapper" title="Top Navigation">
     <div class="menu-toggle">
