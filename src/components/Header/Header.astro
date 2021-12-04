@@ -121,10 +121,12 @@ const lang = currentPage && getLanguageFromURL(currentPage);
         <SidebarToggle client:idle/>
     </div>
     <div class="logo flex">
-        <AstroLogo size={40} />
-        <a href="/">
-          <h1>Blossom+</h1>
-        </a>
+        <!-- <AstroLogo size={40} /> -->
+        { currentPage != '/' &&
+          <a href="/">
+            <h1>Blossom+</h1>
+          </a>
+        }
     </div>
     <div class="flex-grow justify-self-end">
     <div style="">
