@@ -959,10 +959,10 @@ binary-extensions@^2.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
-blossomplus@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/blossomplus/-/blossomplus-0.0.1.tgz#7b9065e859bd626d4917cf41ae57724c1b8f8edb"
-  integrity sha512-xjOiyudaT2hBGhcEhj3mwoaZhLSZ3VAjgL/8nsF8jvwIxEpuHJofkl8ChmBAM4BXFqbndlwic6l4KCyO+sD6Lg==
+blossomplus@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/blossomplus/-/blossomplus-0.0.7.tgz#30ef03b3cb7a7c561e0b55d4b694a50a54d71bbc"
+  integrity sha512-59rEJdM/5PCx2JshuVhVkjDq3y0LvRm4MVx4Ghkx36ligOWuAbd35nhhFdhXeXhasjC2CBmnVvzOVfXEMqV9lQ==
   dependencies:
     chalk "^4.1.2"
     commander "^8.3.0"
