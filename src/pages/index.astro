@@ -12,6 +12,12 @@ const currentPage = Astro.request.url.pathname;
 ---
 
 <!--  when content is blank (such as in this case) content details thankfully default to site details -->
+<style>
+  .hero{
+    min-height: 50vh;
+  }
+</style>
+
 <html dir={content.dir ?? 'ltr'} lang={content.lang ?? 'en-us'} class="initial" data-theme>
   <head>
     <HeadCommon />
@@ -22,9 +28,11 @@ const currentPage = Astro.request.url.pathname;
   <body>
     <Header currentPage={currentPage} />
     <main class="bg-base-100 text-base-content">
-      <div class="hero min-h-screen bg-gradient-to-tr from-primary to-secondary">
+      <div class="hero bg-gradient-to-tr from-primary to-secondary">
         <div class="flex-col hero-content lg:flex-row-reverse">
-          
+          <div class="mockup-code">
+            <pre data-prefix="$"><code>npx blossomplus init</code></pre>
+          </div>
           <div>
             <h1 class="mb-5 text-5xl font-bold">
                   Blossom+
