@@ -32,12 +32,12 @@ export const KNOWN_LANGUAGES = {
 export const SIDEBAR = {
   en: [
     { text: '', header: true },
-    { text: 'Section Header', header: true },
-    { text: 'Introduction', link: 'en/introduction' },
-    { text: 'Page 2', link: 'en/page-2' },
-    { text: 'Page 3', link: 'en/page-3' },
+    { text: 'Guides', header: true },
+    { text: 'Getting Started', link: 'en/introduction' },
 
-    { text: 'Another Section', header: true },
-    { text: 'Page 4', link: 'en/page-4' },
+    { text: 'Commands', header: true },
+    { text: 'Init', link: 'en/init' },
+    { text: 'Add (theme)', link: 'en/add' },
+    { text: 'List', link: 'en/list' },
   ],
 };
