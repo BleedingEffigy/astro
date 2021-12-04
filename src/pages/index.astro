@@ -16,6 +16,9 @@ const currentPage = Astro.request.url.pathname;
   .hero{
     min-height: 50vh;
   }
+  a {
+    @apply underline text-primary hover:text-primary-focus
+  }
 </style>
 
 <html dir={content.dir ?? 'ltr'} lang={content.lang ?? 'en-us'} class="initial" data-theme>
@@ -50,7 +53,7 @@ const currentPage = Astro.request.url.pathname;
       <section>
         <div class="flex flex-row flex-wrap justify-between mx-8">
 
-          <a href="" class="block p-6 m-2 w-1/4 bg-base-100">
+          <div class="block p-6 m-2 w-1/4 bg-base-100">
             <span class="inline-block text-base-content rounded-sm">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -64,9 +67,9 @@ const currentPage = Astro.request.url.pathname;
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facere fuga illum, totam dolor odio ad sunt quidem
               similique sint.
             </p>
-          </a>
+          </div>
 
-          <a href="" class="block p-6 m-2 w-1/4 bg-base-100">
+          <div class="block p-6 m-2 w-1/4 bg-base-100">
             <span class="inline-block text-base-content rounded-sm">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -78,9 +81,9 @@ const currentPage = Astro.request.url.pathname;
             <p class="mt-3 text-sm text-base-content">
               Easily manage and add new themes to your project with simple commands
             </p>
-          </a>
+          </div>
 
-          <a href="" class="block p-6 m-2 w-1/4 bg-base-100">
+          <div class="block p-6 m-2 w-1/4 bg-base-100">
             <span class="inline-block text-base-content rounded-sm">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -92,7 +95,7 @@ const currentPage = Astro.request.url.pathname;
             <p class="mt-3 text-sm text-base-content">
               Already have a working theme? Make a pull request and soon enough your theme will be available for you to install in new projects!
             </p>
-          </a>
+          </div>
         </div>
       </section>
 
@@ -112,7 +115,7 @@ const currentPage = Astro.request.url.pathname;
 
             <Code code={`npx blossomplus add xmas`} lang="shellscript" theme="dracula-soft" />
 
-            All custom themes live in the repo and can be found here.
+            All custom themes live in the repo and [can be found here](https://github.com/BleedingEffigy/blossom-plus/tree/master/themes "Blossom+ Themes").
 
             ### List all custom themes
 
