@@ -15,7 +15,7 @@ const lang = currentPage && getLanguageFromURL(currentPage);
     header {
       z-index: 11;
       width: 100%;
-      @apply bg-base-200 hover:bg-base-200 text-primary hover:text-primary-focus;
+      @apply bg-transparent hover:bg-base-200 text-base-content hover:text-primary-focus;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -23,7 +23,10 @@ const lang = currentPage && getLanguageFromURL(currentPage);
       position: sticky;
       top: 0;
     }
-
+    
+    a span {
+      @apply text-primary
+    }
 
     .logo {
       display: flex;
@@ -116,21 +119,32 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 <header>
     <SkipToContent />
     <nav class="nav-wrapper" title="Top Navigation">
-    <div class="menu-toggle">
-        <SidebarToggle client:idle/>
-    </div>
+    { currentPage != '/' &&
+      <div class="menu-toggle">
+          <SidebarToggle client:idle/>
+      </div>
+    }
     <div class="logo flex">
         <!-- <AstroLogo size={40} /> -->
         { currentPage != '/' &&
           <a href="/">
-            <h1>Blossom+</h1>
+            <h1>Blossom<span>+</span></h1>
           </a>
         }
     </div>
-    <div class="flex-grow justify-self-end">
-    <div style="">
+    <div class="flex flex-grow flex-row justify-self-end">
+    <div class="flex flex-row invisible">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+    <div class="visible">
       <ThemeSelect client:visible />
     </div>
+      
     </div>
     {KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
     {CONFIG.ALGOLIA && <div class="search-item"><Search client:idle /></div>}
