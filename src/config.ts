@@ -39,5 +39,7 @@ export const SIDEBAR = {
     { text: 'Init', link: 'en/init' },
     { text: 'Add (theme)', link: 'en/add' },
     { text: 'List', link: 'en/list' },
+    
+    { text: 'Themes', header: true },
   ],
 };

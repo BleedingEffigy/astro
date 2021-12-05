@@ -36,7 +36,7 @@ Blossom+ works by adding the daisyui plugin into an existing tailwind configurat
 
 ### Add daisyUI plugin to tailwinds config file
 
-```shellscript
+```bash
 npx blossomplus init
 ```
 
@@ -44,7 +44,7 @@ This also installs all the default themes provided by daisyUI
 
 ### Add a custom theme
 
-```shellscript
+```bash
 npx blossomplus add xmas
 ```
 
@@ -52,6 +52,6 @@ All custom themes live in the repo and [can be found here](https://github.com/Bl
 
 ### List all custom themes
 
-```shellscript
+```bash
 npx blossomplus list
 ```
