@@ -6,7 +6,7 @@ layout: ../../layouts/MainLayout.astro
 
 ### Easily read the contents of your custom themes map in daisyuis configuration
 
-#### blossomplus list
+#### > blossomplus list
 
 lists all installed custom themes
 

@@ -6,7 +6,7 @@ layout: ../../layouts/MainLayout.astro
 
 ### Add a theme from the [list of user-made themes](https://github.com/BleedingEffigy/blossom-plus/tree/master/themes)
 
-#### blossomplus add <theme> 
+#### > blossomplus add <theme> 
 
 Looks up the given theme and stores it in daisyui configurations custom theme array
 
