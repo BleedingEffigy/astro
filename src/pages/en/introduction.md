@@ -15,7 +15,7 @@ npx tailwindcss init
 ```
 This creates a minimal template to start customizing your installation.
 
-As of now, daisyui requires you to manually install the plugin. What's more, if you want to use custom themes, you additionally have to setup the daisyui config object:
+As of now, daisyui requires you to manually install its plugin. What's more, if you want to use custom themes, you additionally have to setup the daisyui config object:
 
 ```shell
 module.exports = {
