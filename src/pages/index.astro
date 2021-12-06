@@ -21,7 +21,7 @@ const currentPage = Astro.request.url.pathname;
   }
 </style>
 
-<html dir={content.dir ?? 'ltr'} lang={content.lang ?? 'en-us'} class="initial" data-theme>
+<html dir={content.dir ?? 'ltr'} lang={content.lang ?? 'en-us'} class="initial" data-theme="blossom">
   <head>
     <HeadCommon />
     <HeadSEO {content} canonicalURL={Astro.request.canonicalURL} />
