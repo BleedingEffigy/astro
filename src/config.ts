@@ -6,7 +6,7 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
   image: {
-    src: 'https://github.com/BleedingEffigy/astro/blob/master/public/BlossomOG.png',
+    src: 'https://github.com/BleedingEffigy/astro/blob/master/public/BlossomOG.png?raw=true',
     alt: 'Landing page of Blossom+, showing themes and features',
   },
   twitter: 'alexwhocodes255',
